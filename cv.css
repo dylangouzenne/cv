@@ -1,0 +1,129 @@
+
+@keyframes slidy {
+0% { left: 0%; }
+20% { left: 0%; }
+25% { left: -100%; }
+45% { left: -100%; }
+50% { left: -200%; }
+70% { left: -200%; }
+75% { left: -300%; }
+95% { left: -300%; }
+100% { left: -400%; }
+}
+
+body { margin: 0; } 
+div#slider { overflow: hidden; }
+div#slider figure img { width: 20%; float: left; }
+div#slider figure { 
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  text-align: left;
+  font-size: 0;
+  animation: 10s slidy infinite; 
+}
+
+body, html {
+  background: #73676D;
+}
+
+.text {
+  color: #FFFFFF;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 400px;
+  height: 400px;
+  background: url("img/404.jpg");
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  box-shadow: 0 2px 1px rgba(0,0,0,.1);
+  overflow: hidden;
+}
+
+.container h1 {
+  margin: auto;
+  width: 105%;
+  -webkit-transform: translateX(-2.5%);
+  text-align: center;
+  padding: .2em 0;
+  border-radius: 2px;
+  color: #73676D;
+  background: rgba(255, 255, 255, .95);
+  font-size: 3.5em;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  text-shadow: 0 2px white;
+  box-shadow: 0 2px 1px rgba(0,0,0,.1);
+  margin-top: 2em;
+  transition: all 0.3s ease-in-out;
+}
+
+.container .desc {
+  position: relative;
+  top: 150px;
+  background: rgba(255, 255, 255, .95);
+  width: 100%;
+  padding: 1em;
+  letter-spacing: 1.2px;
+  line-height: 1.5em;
+  font-family: sans-serif;
+  margin: 0;
+  transition: all .3s ease-in-out;
+}
+
+
+
+
+.container:hover .desc {
+  top: 0px;
+}
+
+.container:hover h1 {
+  padding-top: 3em;
+  font-size: 2em;
+  margin-top: -2.5em;
+}
+
+.arrow {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  background: #2C7261;
+  width: 25px;
+  height: 3px;
+  margin: .2em;
+}
+
+.arrow::after {
+  position: absolute;
+  top: -5px;
+  right: 0px;
+  content: '';
+  width: 15px;
+  height: 3px;
+  background: #2c7261;
+  -webkit-transform: rotate(35deg);
+  transform: rotate(35deg);
+}
+
+.arrow::before {
+  position: absolute;
+  top: 5px;
+  right: 0px;
+  content: '';
+  width: 15px;
+  height: 3px;
+  background: #2c7261;
+  -webkit-transform: rotate(-35deg);
+  transform: rotate(-35deg);
+}
