@@ -40,8 +40,13 @@
 #reseaux-sociaux{
 	display: flex;
 	flex-direction: row;
-	justify-content: center;
+	justify-content: flex-end;
 	align-items: center;
+}
+
+.icon-reseaux{
+	width: 4em;
+	height: 4em;
 }
 
 #photo-profil{
@@ -99,17 +104,33 @@
 	width:100%;
 	background-color: #305577;
 	color: #ffffff;
-	//padding: 2em 2em 2em 2em;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
 }
 
 /*/////////////////////// zone formation /////////////////////////*/
 
 .formations{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	background-size: 100%;
 	background-position: center;
 	background-image:url(img/campus-etudiant.jpg);
 	background-attachment:fixed;
 	background-repeat:no-repeat;
+	margin: 0;
+}
+
+#titre-formations{
+	background-color: rgba(227, 226, 232, 0.8);
+	padding: 0.75em;
+	border-radius: 1.25em;
+	margin:1em;
 }
 
 .formations-box{
@@ -120,9 +141,11 @@
 	flex-wrap: wrap;
 }
 
-.logo-ecole{
-	width: 10em;
-	height: 10em;
+.logo-formations-box{
+	//align-items: center;
+	//margin-left: auto;
+	//margin-right: auto;
+	text-align: center;
 }
 
 /*/////////////////////// commun /////////////////////////*/
@@ -146,4 +169,10 @@ body{
 	padding: 2em;
 	background-color: rgba(227, 226, 232, 0.8);
 
+}
+
+.logo{
+	width: 10em;
+	height: 10em;
+	border-radius: 1em;
 }
